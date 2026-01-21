@@ -53,6 +53,7 @@ public:
     virtual void setInvert(bool invert);
     virtual void shutdown(bool enable);
     void setFlip(bool flip);
+    void flip(bool horiz, bool vert) override;
 
 private:
     uint8_t* _dataBuffer;    // put RGB565 data

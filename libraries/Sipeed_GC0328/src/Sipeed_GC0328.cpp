@@ -1202,6 +1202,11 @@ int Sipeed_GC0328::gc0328_get_rgb_gain_db(float *r_gain_db, float *g_gain_db, fl
     return ret;
 }
 
+void Sipeed_GC0328::flip(bool horiz, bool vert)
+{
+    gc0328_set_hmirror(horiz);
+    gc0328_set_vflip(vert);
+}
 int Sipeed_GC0328::gc0328_set_hmirror(int enable)
 {
     uint8_t data;
